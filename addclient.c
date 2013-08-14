@@ -15,13 +15,13 @@ main()
   //creating socket
   int socketid=socket(AF_INET,SOCK_STREAM,0);
   
-  //setting port information of socket 
+  //setting port
   struct sockaddr_in client;
   client.sin_family=AF_INET;
   client.sin_port=htons(2343);
   client.sin_addr.s_addr=inet_addr("127.0.0.1");
 
-  //request for connection
+  //requesting connection
   connect(socketid,(struct sockaddr*)&client,sizeof(client));
 
   //send a message
